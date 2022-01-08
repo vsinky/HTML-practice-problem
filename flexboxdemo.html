@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>A basic page</title>
+    <link rel="shortcut icon" href="./assets/fav.png">
+    <style>
+        body {
+            padding: 2em;
+        }
+        
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .mainContentItem {
+            text-align: left;
+            background: deepskyblue;
+        }
+        
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        
+        .sideBarLeftItem {
+            background: gold;
+        }
+        
+        .sideBarRightItem {
+            background: hotpink;
+        }
+        
+        .sideBarItem {
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+        
+        .mainContentItem {
+            flex: 3 0px;
+        }
+        
+        .sideBarLeftItem {
+            order: 1;
+        }
+        
+        .mainContentItem {
+            order: 2;
+        }
+        
+        .sideBarRightItem {
+            order: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="headerContainer">Header sample flexbox example</header>
+    <div class="mainContainer">
+        <section class="mainContentItem">
+            <article>
+                <h2>First article</h2>
+                <p>This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</sub>
+                </p>
+            </article>
+            <article>
+                <h2>Second article</h2>
+                <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in
+                    horizontal rows or vertical columns.</p>
+            </article>
+            <article>
+                <h2>Thrid article</h2>
+                <p>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.</p>
+                <p>This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap.</p>
+            </article>
+        </section>
+        <sidebar class="sideBarItem sideBarLeftItem">Left Bar</sidebar>
+        <sidebar class="sideBarItem sideBarRightItem">Right Bar</sidebar>
+    </div>
+    <footer class="footerContainer">Footer</footer>
+
+</body>
+
+</html>
